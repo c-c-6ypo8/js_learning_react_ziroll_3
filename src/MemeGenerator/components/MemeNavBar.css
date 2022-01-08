@@ -1,0 +1,26 @@
+.meme-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 37px 20px 20px;
+  width: 100%;
+  background: var(--bg-gradient);
+  align-items: center;
+  color: white;
+}
+
+.meme-nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.meme-nav-logo-title {
+  font-size: 20.75px;
+  letter-spacing: -1.5px;
+}
+
+.meme-nav-header {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500px;
+}
