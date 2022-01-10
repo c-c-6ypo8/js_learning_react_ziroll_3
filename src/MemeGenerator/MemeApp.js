@@ -1,5 +1,6 @@
 import './MemeApp.css'
 import { MemeNavBar } from './components/MemeNavBar'
+import { MemeForm } from './components/MemeForm'
 
 export const MemeApp = () => {
   return (
@@ -7,7 +8,9 @@ export const MemeApp = () => {
       <header>
         <MemeNavBar />
       </header>
-      <main></main>
+      <main className='meme-main'>
+        <MemeForm />
+      </main>
     </div>
   )
 }

@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
-.meme-app {
-  --bg-gradient: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+.meme-app {  
   border-radius: 7px;
   width: var(--app-width);
   background-color: white;
   overflow: hidden;
   font-family: 'Karla', sans-serif;
+}
+
+.meme-main {
+  padding: 36px;
 }
