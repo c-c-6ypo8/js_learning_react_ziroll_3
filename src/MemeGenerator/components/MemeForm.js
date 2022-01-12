@@ -8,41 +8,46 @@ export const MemeForm = () => {
   useEffect(() => {
     buttonOnEnterStyleFix('meme-form-button', 'meme-form-button-active')
     elementEnterToTab('meme-form-textinputs')
-    selectRandomImage()
   }, [])
 
-  const [memeImage, setMemeImage] = useState()
+  const [meme, setMeme] = useState({
+    textTop: '',
+    textBottom: '',
+    image: 'http://i.imgflip.com/1bij.jpg',
+  })
+
+  const [allMemeImages, setAllMemeImages] = useState(MemeData)
 
   const selectRandomImage = () => {
-    const memes = MemeData.data.memes
+    const memes = allMemeImages.data.memes
     const randomMem = memes[Math.floor(Math.random() * memes.length)]
-    setMemeImage(randomMem.url)
+    setMeme((prev) => ({ ...prev, image: randomMem.url }))
   }
 
   return (
-    <form className="meme-form">
-      <section className="meme-form-textinputs">
+    <form className='meme-form'>
+      <section className='meme-form-textinputs'>
         <input
-          className="meme-form-textinput"
-          id="meme-form-text-top"
-          name="meme-form-text-top"
-          placeholder="Top text"
+          className='meme-form-textinput'
+          id='meme-form-text-top'
+          name='meme-form-text-top'
+          placeholder='Top text'
         ></input>
         <input
-          className="meme-form-textinput"
-          id="meme-form-text-bottom"
-          name="meme-form-text-bottom"
-          placeholder="Bottom text"
+          className='meme-form-textinput'
+          id='meme-form-text-bottom'
+          name='meme-form-text-bottom'
+          placeholder='Bottom text'
         ></input>
       </section>
       <button
-        className="meme-form-button"
-        type="button"
+        className='meme-form-button'
+        type='button'
         onClick={selectRandomImage}
       >
-        <span className="meme-form-button-text">Get a new meme image</span> 🖼️
+        <span className='meme-form-button-text'>Get a new meme image</span> 🖼️
       </button>
-      <img src={memeImage} alt="Meme" />
+      <img className='meme-image' src={meme.image} alt='Meme' />
     </form>
   )
 }

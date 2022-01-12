@@ -13,3 +13,7 @@
 .meme-main {
   padding: 36px;
 }
+
+.meme-image {
+  border-radius: 7px;
+}
