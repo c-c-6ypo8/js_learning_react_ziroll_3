@@ -46,7 +46,7 @@ export const MemeForm = () => {
 
   useEffect(() => {
     buttonOnEnterStyleFix('meme-form-button', 'meme-form-button-active')
-    elementEnterToTab('meme-form-textinputs')
+    elementEnterToTab('meme-form-textinput')
     getMemesFromApi('https://api.imgflip.com/get_memes')
   }, [getMemesFromApi])
 

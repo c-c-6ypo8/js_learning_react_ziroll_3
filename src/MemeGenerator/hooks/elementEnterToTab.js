@@ -1,4 +1,5 @@
-// Changes Enter behavior to Tab for all of the elements of provided class name
+// Changes Enter behavior to Tab for all of the elements of provided class name 
+
 
 export const elementEnterToTab = (elementClass) => {
   for (let element of document.getElementsByClassName(elementClass)) {
