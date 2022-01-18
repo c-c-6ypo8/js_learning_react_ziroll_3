@@ -10,14 +10,14 @@ export const MemeForm = () => {
     image: '',
   })
 
-  const [allMemeImages, setAllMemeImages] = useState()
+  const [allMemes, setAllMemes] = useState()
 
   const getMemesFromApi = useCallback((apiURL) => {
     fetch(apiURL)
       .then((response) => response.json())
       .then((dataJSON) => {
         const memes = dataJSON.data.memes
-        setAllMemeImages(memes)
+        setAllMemes(memes)
         setMeme((prev) => ({
           ...prev,
           image: randomElement(memes).url,
@@ -29,7 +29,7 @@ export const MemeForm = () => {
     array[Math.floor(Math.random() * array.length)]
 
   const selectRandomImage = () => {
-    setMeme((prev) => ({ ...prev, image: randomElement(allMemeImages).url }))
+    setMeme((prev) => ({ ...prev, image: randomElement(allMemes).url }))
   }
 
   const handleChange = (event) => {
