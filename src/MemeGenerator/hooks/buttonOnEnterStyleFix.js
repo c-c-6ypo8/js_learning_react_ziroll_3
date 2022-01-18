@@ -1,4 +1,5 @@
-/* Makes buttons correctly react on "Enter" (by meaning it must activate the :active class) */
+/* Makes buttons correctly react on "Enter" (it must activate the :active class) 
+You must provide your own class, the same as the :active one. */
 
 export const buttonOnEnterStyleFix = (buttonClass, activeButtonClass) => {
   for (let button of document.getElementsByClassName(buttonClass)) {
